@@ -3,55 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jazz Invitation</title>
+    <title>Duduetsang's Jazz Invitation</title>
     <style>
         body {
+            background: linear-gradient(to right, #ffcc00, #ff6699);
+            color: #fff;
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            flex-direction: column;
+            overflow: hidden;
+            text-align: center;
         }
         h1 {
-            font-size: 2.5em;
-            animation: fadeIn 2s;
+            font-size: 3em;
+            margin: 20px;
+            text-shadow: 2px 2px 10px #000;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('path/to/stars.png') repeat;
+            animation: float 5s infinite;
         }
-        button {
-            background-color: #007BFF;
-            color: white;
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .music-player {
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .rsvp-button {
+            background-color: #ff6699;
             border: none;
             padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
             font-size: 1.2em;
-            margin-top: 20px;
-            border-radius: 5px;
             transition: background-color 0.3s;
         }
-        button:hover {
-            background-color: #0056b3;
-        }
-        audio {
-            margin-top: 20px;
+        .rsvp-button:hover {
+            background-color: #ffcc00;
         }
     </style>
 </head>
 <body>
-    <h1>You're Invited to a Beautiful Jazz Evening!</h1>
-    <p>Join us for a night of enchanting jazz music, delightful company, and great memories.</p>
-    <audio controls>
-        <source src="jazz-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
-    <br />
-    <button onclick="location.href='rsvp.html'">RSVP Now</button>
+    <div class="stars"></div>
+    <h1>You Are Invited to Duduetsang's Jazz Night!</h1>
+    <p>Date: 21 March 2026</p>
+    <p>Time: 10:00 AM</p>
+    <p>Location: Johannesburg Zoo</p>
+    <div class="music-player">
+        <audio controls>
+            <source src="path/to/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    <button class="rsvp-button" onclick="alert('Thank you for your RSVP!')">RSVP</button>
 </body>
 </html>
