@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jazz in the Lights - Special Invite ✨</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Floating stars background animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.stars {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: float 3s infinite;
+  opacity: 0.6;
+}
+
+.card {
+  background: rgba(255, 215, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  padding: 50px 40px;
+  border-radius: 25px;
+  max-width: 550px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.greeting {
+  font-size: 1.3em;
+  color: #ffed4e;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  margin: 15px 0 30px 0;
+  color: #e0e0e0;
+  font-style: italic;
+}
+
+.details {
+  background: rgba(255, 215, 0, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  margin: 25px 0;
+  border-left: 4px solid #ffd700;
+}
+
+.detail-item {
+  margin: 12px 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.detail-label {
+  color: #ffd700;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 80px;
+  text-align: left;
+}
+
+.detail-value {
+  color: #e0e0e0;
+}
+
+.note {
+  font-size: 0.95em;
+  color: #ffed4e;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 1em;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 140px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rsvp-btn {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #1a1a2e;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.rsvp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+}
+
+.music-btn {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffed4e;
+  border: 2px solid #ffd700;
+}
+
+.music-btn:hover {
+  background: rgba(255, 215, 0, 0.3);
+  transform: scale(1.05);
+}
+
+.music-btn.playing {
+  background: #ffd700;
+  color: #1a1a2e;
+}
+
+.emoji-decor {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+.music-player {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+audio {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 20px;
+  }
+  
+h1 {
+    font-size: 2em;
+  }
+  
+  .details {
+    padding: 15px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="emoji-decor">🎷 ✨ 🎺</div>
+  <h1>Jazz in the Lights</h1>
+  <p class="greeting">Hi Duduetsang! 💖</p>
+  <p class="subtitle">You're Invited to Something Special...</p>
+  <div class="details">
+    <div class="detail-item">
+      <span class="detail-label">📅 Date:</span>
+      <span class="detail-value">21 March 2026</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">⏰ Time:</span>
+      <span class="detail-value">10:00am</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">📍 Location:</span>
+      <span class="detail-value">Johannesburg Zoo 🎶</span>
+    </div>
+  </div>
+  <p class="note">Join me for an evening of smooth jazz, twinkling lights, and unforgettable moments! 🌟</p>
+  <div class="music-player">
+    <p style="font-size: 0.9em; margin-bottom: 10px;">🎵 Listen to the vibe:</p>
+    <audio controls autoplay>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p style="font-size: 0.8em; margin-top: 8px; color: #ffd700;">Smooth Jazz Background</p>
+  </div>
+  <div class="button-group">
+    <button class="rsvp-btn" onclick="rsvpYes()">
+      💫 YES, I'm In!
+    </button>
+  </div>
+</div>
+<script>
+function rsvpYes() {
+  alert('Yay! Can\'t wait to see you there! 😘\n\nThis is going to be amazing! ✨');
+}
+// Create floating stars on load
+window.addEventListener('load', function() {
+  const starCount = 50;
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.className = 'stars';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    document.body.appendChild(star);
+  }
+});
+</script>
+</body>
+</html>
